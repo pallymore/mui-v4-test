@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders active without crashing 1`] = `
+<a
+  className="MuiButtonBase-root sc-bwzfXH uTxCW sc-bdVaJa bIidUE"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  NavItem
+</a>
+`;
+
+exports[`renders as button without crashing 1`] = `
+<button
+  className="MuiButtonBase-root sc-bwzfXH uTxCW sc-bdVaJa bIidUE"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  NavItem
+</button>
+`;
