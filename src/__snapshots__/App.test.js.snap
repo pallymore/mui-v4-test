@@ -1,8 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders ButtonBase without crashing 1`] = `
+<button
+  className="MuiButtonBase-root"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  ButtonBase
+</button>
+`;
+
+exports[`renders StyledButton without crashing 1`] = `
+<button
+  className="MuiButtonBase-root sc-bdVaJa hgHjKz"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  styled btn
+</button>
+`;
+
 exports[`renders active without crashing 1`] = `
 <a
-  className="MuiButtonBase-root sc-bwzfXH uTxCW sc-bdVaJa bIidUE"
+  className="MuiButtonBase-root sc-bwzfXH uTxCW sc-bdVaJa hgHjKz"
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -22,7 +62,7 @@ exports[`renders active without crashing 1`] = `
 
 exports[`renders as button without crashing 1`] = `
 <button
-  className="MuiButtonBase-root sc-bwzfXH uTxCW sc-bdVaJa bIidUE"
+  className="MuiButtonBase-root sc-bwzfXH uTxCW sc-bdVaJa hgHjKz"
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -38,4 +78,46 @@ exports[`renders as button without crashing 1`] = `
 >
   NavItem
 </button>
+`;
+
+exports[`renders disabled StyledButton without crashing 1`] = `
+<button
+  className="MuiButtonBase-root sc-bdVaJa lnTBSA Mui-disabled"
+  disabled={true}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={-1}
+  type="button"
+>
+  styled btn
+</button>
+`;
+
+exports[`renders disabled without crashing 1`] = `
+<a
+  aria-disabled={true}
+  className="MuiButtonBase-root sc-bwzfXH uTxCW sc-bdVaJa lnTBSA Mui-disabled"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  role="button"
+  tabIndex={-1}
+>
+  NavItem
+</a>
 `;

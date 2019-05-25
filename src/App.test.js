@@ -1,28 +1,34 @@
 import React from 'react';
-import styled from 'styled-components';
 import renderer from 'react-test-renderer';
 
 import { ButtonBase } from '@material-ui/core';
 
-const StyledButton = styled((props) => (
-  <ButtonBase {...props} />
-))`
-  && {
-    background-color: red;
+import { StyledNav, StyledButton } from './App.js';
 
-    ${props => props.disabled && `
-      background-color: grey;
-    `}
-  }
-`;
+it('renders ButtonBase without crashing', () => {
+  const tree = renderer.create(<ButtonBase>ButtonBase</ButtonBase>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
-const StyledNav = styled(({ active, component, ...rest }) => (
-  <StyledButton component={component} {...rest} />
-))``;
+it('renders disabled ButtonBase without crashing', () => {
+  const tree = renderer.create(<ButtonBase disabled>ButtonBase</ButtonBase>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
-StyledNav.defaultProps = {
-  component: 'a',
-};
+it('renders StyledButton without crashing', () => {
+  const tree = renderer.create(<StyledButton>styled btn</StyledButton>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders StyledButton without crashing', () => {
+  const tree = renderer.create(<StyledButton>styled btn</StyledButton>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('renders disabled StyledButton without crashing', () => {
+  const tree = renderer.create(<StyledButton disabled>styled btn</StyledButton>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 it('renders active without crashing', () => {
   const tree = renderer.create(<StyledNav active>NavItem</StyledNav>).toJSON();

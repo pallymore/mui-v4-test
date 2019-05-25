@@ -1,24 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
+import styled from 'styled-components';
+import { ButtonBase } from '@material-ui/core';
+
 import './App.css';
+
+export const StyledButton = styled((props) => (
+  <ButtonBase {...props} />
+))`
+  && {
+    background-color: red;
+
+    ${props => props.disabled && `
+      background-color: grey;
+    `}
+  }
+`;
+
+export const StyledNav = styled(({ active, component, ...rest }) => (
+  <StyledButton component={component} {...rest} />
+))``;
+
+StyledNav.defaultProps = {
+  component: 'a',
+};
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>
+        <StyledButton>
+          styled-button
+        </StyledButton>
+      </p>
+      <p>
+        <StyledNav active>
+          styled nav active
+        </StyledNav>
+      </p>
+      <p>
+        <StyledNav disabled>
+          styled nav disabled
+        </StyledNav>
+      </p>
+      <p>
+        <StyledNav component="button">
+          styled nav button
+        </StyledNav>
+      </p>
+      <p>
+        <StyledNav component="button" disabled>
+          styled nav button disabled
+        </StyledNav>
+      </p>
     </div>
   );
 }
