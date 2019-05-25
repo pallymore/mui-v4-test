@@ -9,6 +9,10 @@ const StyledButton = styled((props) => (
 ))`
   && {
     background-color: red;
+
+    ${props => props.disabled && `
+      background-color: grey;
+    `}
   }
 `;
 
